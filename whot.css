@@ -1,0 +1,703 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #237873;
+}
+.sidebar{
+    height: 100vh;
+    width: 20%;
+    background-color: #2FC4BC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-80%);
+    transition: transform 0.5s ease-in;
+    transform-origin: left;
+    scrollbar-arrow-color: white;
+    scroll-behavior: smooth;
+    box-shadow: 5px 5px 10px 1px #114542;
+}
+
+.toggle{
+    margin-left: -15px;
+    width: 100%;
+    padding: 20px 0 20px 20px;
+    display: block;
+}
+.toggle1, .toggle3, .toggle2{
+    background-color: black;
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    margin-left: 3px;
+    transition: 0.5s all;
+}
+.toggle:hover .toggle1, .toggle:hover .toggle3, .toggle:hover .toggle2{
+    background-color: white;
+    color: white;
+}
+.toggle2{
+   display: none;
+    transition: all 0.5s;
+    font-size: 50px;
+}
+
+.avatar{
+    text-align: center;
+}
+.avatar img{
+    width:35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 2px solid black;
+    transition: all 0,5s;
+}
+.avatar div{
+    transition: all 0.5s;
+    width:35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 100%;
+    display: block;
+    float: right;
+    background-color: rgb(0, 0, 0);
+}
+.avatar img:hover{
+    opacity: 0.7;
+}
+.avatar p{
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+.sidebar ul{
+    width: 100%;
+    padding: 0;
+    float: left;
+    margin: 0;
+    list-style: none;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar li span{
+    transition: all 0.5s;
+    display: none;
+}
+.sidebar a{
+    font-size: 140%;
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0;
+    transition: background-color 0.5s;
+}
+
+.sidebar a:hover {
+    background-color: white;
+}
+.sideicon{
+    transition: all 0.5s;
+    float: right;    
+    margin-right: 15px;
+}
+#sec{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+.interface{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    border-radius: 50px;
+    background-color: #c58825;
+    height: 90vh;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    transition: width 1s ease-out, transform 0.5s ease-out;
+}
+/* .back-flex{
+    grid-row: 1/2;
+}
+.card-flex{
+    grid-row: 2/3;
+}
+.front-flex{
+    grid-row: 3/4;
+} */
+.oponents-card, .Players-card{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-back {
+    position: relative;
+    background-color: #B3443D;
+    color: white;
+    font-size: 120%;
+    box-shadow: 2px 5px 10px 0 rgb(0,0,0);
+}
+.card-back .shape{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100%;
+    transform: translate(-50%, -50%);
+    /*font-family: 'Great Vibes', cursive;*/
+    font-family: 'sofia';   
+}
+/* .card-back::before {
+    position: absolute;
+    transform: rotate(180deg);
+    content: 'Whot';
+    margin-left: 25px;
+    margin-top: 70px;
+    
+} */
+/*.card-back::before {
+    position: absolute;
+    content: 'Whot';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-box-reflect: below 1px;
+}*/
+.supliment-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General styles for the cards */
+ .cards, .front, .card-back { 
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+    z-index: 800;
+}
+.cards {
+    color: brown;
+    background-color: white;
+    transform: rotate(10deg);
+    font-size: 170%;
+    box-shadow: 5px 7px 10px rgb(0,0,0);
+    margin-left: 70px;
+}
+  
+/* .p{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 25px;
+    top: 35px; 
+}
+.p2{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 25px;
+    top: 35px; 
+}
+.textRotate2{
+    position: absolute;
+    left: 25px;
+    top: 60px; 
+}
+.textRotate{
+    position: absolute;
+    left: 25px;
+    top: 60px; 
+}  */
+/*.cards::before{
+    /* content: '20'; *//*
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}*/
+/*.cards::after{
+    /* content: '20'; *//*
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}*/
+/*.cards::before {
+    position: absolute;
+    content: 'Whot';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-box-reflect: below 1px;
+}*/
+.card .shape{
+    font-size: 100%;
+    transform: translateY(-20%);
+    font-family: 'Great Vibes', cursive;
+}
+.shapeSpan{
+    display: block;
+    transform: rotate(180deg)
+
+}
+.card-stack .card-back{
+    
+    transform: rotateZ(-45deg);
+}
+.card-stack{
+    margin-left: 70px;
+}
+.front-stack{
+    transform: rotateX(0deg);
+    position: absolute;
+}
+.front {
+    position: relative;
+    margin: 0px 20px 0 0px;
+    background-color: white;
+    color: brown;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-size: 170%;
+    box-shadow: 2px 5px 10px rgb(0,0,0);   
+}
+#frontCont{
+    width: 100%;
+}
+/*.circle {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: brown;
+    transform: translate(-50%, -50%);
+}
+.square{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: brown;
+}
+.triangle{
+    position: absolute;
+    top: 40px;
+    margin-left: 8px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid brown;
+}
+.front::before{
+    position: absolute;
+    content: '5';
+    top: 8px;
+    left: 8px;
+}
+.front::after{
+    position: absolute;
+    content: '5';
+    bottom: 8px;
+    right: 8px;
+    transform: rotate(180deg);
+}*/
+#num{
+    font-size: 70%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#num2{
+    font-size: 70%;
+    margin-top: auto;
+    align-self: flex-end;   
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.circle, .square, .star, .cross, .triangle, .card{
+    height: 150px;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.fatri1{
+    border-bottom: 60px solid brown;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+.fatri{
+    border-bottom: 10px solid brown;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.faplus1{
+    background-color: brown;
+    height: 60px;
+    width: 30px;
+    transform: rotate(90deg);
+}
+.cross .shape span{
+    position: absolute;
+    transform: translateY(35%);
+    background-color: brown;
+    height: 60px;
+    width: 30px;
+}
+.shape{
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 300%;
+    height: 30%;
+    transform: translateY(-70%);
+}
+.fa1{
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+}
+.fa2{
+    align-self: flex-end;
+    font-size: 13px;
+    height: 20px;
+    width: 20px;
+}
+.sidebarActive{
+    transform: translateX(0%);
+}
+.uismall{
+    width: 70%;
+    margin-right: auto;
+    transform: translateX(10%);
+}
+.togglePlay .toggle2{
+    height: 22px;
+    display: inline-block;
+    animation: toggle 0.5s linear forwards;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:5px ;
+    border-radius: 10px 10px 40px 0;
+    
+}
+
+@keyframes toggle {
+    from{
+        transform: rotate(0) translate(0);
+    }
+    to{     
+      transform: rotate(-45deg) translate(-5px,-3px);
+    }
+}
+.togglePlay .toggle3{
+    height: 22px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 0;
+    border-radius: 0 40px 10px 10px;
+    transform: rotate(45deg) translate(-4px,13px);
+}
+.avatarD img{
+    width:100px;
+    height: 100px;
+    
+}
+.avatarD div{
+    width:100px;
+    height: 100px;
+    margin-right: 10px;
+    float: none;
+    display: inline-block;
+    transition: all 0-.5s;
+}
+.list li span{
+    display: inline;
+    animation: menutxt 0.5s ease forwards 1s;
+}
+.list li a{
+    padding: 20px 20px;
+}
+.list .sideicon{
+    float: none;    
+    margin-right: 10px;
+}
+@keyframes menutxt{
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 1024px){
+    body{
+        transform: rotate(90deg);
+    }
+    .sidebar{
+        width: 25%;
+        transform: translateX(-70%);
+        height: 100vw;
+    }
+    .avatar img{
+        border: 1px solid black;
+    }
+    #sec{
+        height: 100vw;
+        width: 100vh;
+    }
+    .interface{
+        height: 90vw;
+    }
+    .sidebarActive{
+        transform: translateX(0%);
+    }
+    .uismall{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    .sidebar a{
+        font-size: 100%;
+    }
+    .avatar img{
+        width:20px;
+        height: 20px;
+    }
+    .avatar div{
+        width:20px;
+        height: 20px;
+    }
+    .avatarD img{
+        width:100px;
+        height: 100px;
+        
+    }
+    .avatarD div{
+        width:100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 600px){
+    .toggle1, .toggle3, .toggle2{
+        width: 2px;
+        height: 20px;
+        margin-left: 1px;
+    }
+    .sidebar a{
+        padding: 10px 0;
+    }
+    .cards, .card-stack, .front, .card-back, .circle, .square, .star, .cross, .triangle, .card{ 
+        height: 130px;
+        width: 100px;
+        
+    }
+    #num, #num2{
+        font-size: 60%;
+    }
+    .fatri1{
+        border-bottom: 55px solid brown;
+        border-left: 27px solid transparent;
+        border-right: 27px solid transparent;
+    }
+    .fatri{
+        border-bottom: 7px solid brown;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    } 
+    .faplus1{
+        height: 55px;
+        width: 27px;
+    }
+    .cross .shape span{
+        height: 55px;
+        width: 27px;
+    }
+    .fa1{
+        height: 10px;
+        width: 10px;
+        font-size: 10px;
+    }
+    .fa2{
+        height: 5px;
+        width: 18px;
+        font-size: 10px;
+    }
+    .shape{
+        font-size: 270%;
+    }
+    .togglePlay .toggle2{
+        height: 15px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left:5px ;
+        border-radius: 10px 10px 40px 0;
+        
+    }
+    .togglePlay .toggle3{
+        height: 15px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 14px;
+        border-radius: 0 40px 10px 10px;
+        transform: rotate(45deg) translate(-10px, 20px);
+    }
+    .list li a{
+        padding: 10px 10px;
+    }
+    .avatarD img{
+        width:70px;
+        height: 70px;
+        
+    }
+    .avatarD div{
+        width:70px;
+        height: 70px;
+    }
+}
+@media screen and (max-width: 500px){
+    .sidebar{
+        width: 30%;
+        transform: translateX(-70%);
+    }
+    .cards, .card-stack, .front, .card-back, .circle, .square, .star, .cross, .triangle, .card{ 
+        height: 100px;
+        width: 70px;
+    }
+    .card-back .shape{
+        font-size: 80%;
+    }
+    .card .shape{
+        font-size: 60%;
+        transform: translateY(-10%);
+    }
+    #num, #num2{
+        font-size: 50%;
+    }
+    .fatri1{
+        border-bottom: 40px solid brown;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+    .fatri{
+        border-bottom: 7px solid brown;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+    .faplus1{
+        height: 40px;
+        width: 20px;
+    } 
+    .cross .shape span{
+        transform: translateY(5%);
+        height: 40px;
+        width: 20px;
+    }
+    .fa1{
+        font-size: 10px;
+    }
+    .fa2{
+        height: 10px;
+        font-size: 10px;
+    }
+    .shape{
+        font-size: 150%;
+        transform: translateY(-40%);
+    } 
+    .sidebarActive{
+        transform: translateX(0%);
+    } 
+}
+@media screen and (max-width: 480px){
+    .avatar div{
+        margin-right: 5px;
+    }
+    .sidebar a{
+        font-size: 60%;
+        padding: 8px 0;
+    }
+    .sideicon{
+        margin-right: 12px;
+    }
+    .list li a{
+        padding: 5px;
+    }
+    .uismall{
+        width: 85%;
+    }
+    
+}
+@media screen and (max-width: 400px){
+    #sec{
+        padding: 20px;
+    }
+    .cards, .card-stack, .front, .card-back, .circle, .square, .star, .cross, .triangle, .card{ 
+        height: 70px;
+        width: 50px;
+        border-radius: 5px;
+    }
+    .card-back .shape{
+        font-size: 50%;
+    }
+    .card .shape{
+        font-size: 40%;
+        transform: translateY(-10%);
+    }
+    #num, #num2{
+        font-size: 40%;
+    }
+    .fatri1{
+        border-bottom: 25px solid brown;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        margin-right: 5px;
+    }
+    .fatri{
+        border-bottom: 5px solid brown;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+    }
+    .faplus1{
+        height: 25px;
+        width: 12px;
+    }
+    .cross .shape span{
+        height: 25px;
+        width: 12px;
+    } 
+    .fa1{
+        font-size: 5px;
+    }
+    .fa2{
+        height: 12px;
+        width: 13px;
+        font-size: 5px;
+    }
+    .shape{
+        font-size: 100%;
+        transform: translateY(-20%);
+    }
+    .avatarD img{
+        width:50px;
+        height: 50px;
+        
+    }
+    .avatarD div{
+        width:50px;
+        height: 50px;
+    } 
+}
